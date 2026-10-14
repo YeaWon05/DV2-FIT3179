@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 800,
+  "title": "Recreational Fishing Locations in Victoria",
+
+  "projection": {
+    "type": "mercator",
+    "scale": 3000,
+    "center": [145, -36.8]
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "../js/victoria.json",
+        "format": {
+          "type": "json"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "white",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      }
+    },
+
+    {
+      "data": {
+        "url": "../data/fishing_location.csv",
+        "format": {
+          "type": "csv"
+        }
+      },
+
+      "mark": {
+        "type": "circle",
+        "size": 50,
+        "color": "red",
+        "opacity": 0.8,
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+
+        "tooltip": [
+          {
+            "field": "Location",
+            "type": "nominal",
+            "title": "Fishing Location"
+          },
+          {
+            "field": "Fish",
+            "type": "nominal",
+            "title": "Fish Species"
+          }
+        ]
+      }
+    }
+  ],
+
+  "config": {
+    "view": {
+      "stroke": null
+    }
+  }
+}

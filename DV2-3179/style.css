@@ -1,0 +1,35 @@
+body {
+    background-color: white;
+    color: #333333;
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.page {
+    max-width: 1024px;
+    width: 90%;
+    background-color: white;
+    margin: auto;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: #174a68;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+.vis-container {
+    width: 100%;
+}
+
+.vis-container .vega-embed {
+    display: flex;
+    justify-content: center;
+}

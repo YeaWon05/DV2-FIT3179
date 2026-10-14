@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fishing and Recreational Angling in Australia</title>
+
+    <!-- Import Vega & Vega-Lite -->
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+
+    <!-- Import PureCSS -->
+    <link rel="stylesheet"
+        href="https://unpkg.com/purecss@2.0.3/build/pure-min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="page">
+
+        <h1>Fishing and Recreational Angling in Australia</h1>
+
+        <p>
+            This visualisation explores recreational fishing across Australia,
+            including fishing participation, catch, fishing locations,
+            fish species and fishing effort.
+        </p>
+
+        <hr>
+
+        <h2>1. Recreational Fishing Participation Across Australia</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis1" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>2. Recreational Fishing Catch by Region in Queensland</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis2" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>3. Recreational Fishing Locations in Victoria</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis3" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>4. Estimated Recreational Fish Harvest by State and Species</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis4" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>5. Estimated Catch by Species in NSW</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis5" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>6. Recreational Fishing Effort by Waterbody Type</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis6" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>7. Changes in Recreational Fish Catch by Species</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis7" class="chart"></div>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+
+        <h2>8. Recreational Fishing Effort by Survey Year</h2>
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <div id="vis8" class="chart"></div>
+            </div>
+        </div>
+
+        <hr>
+
+        <p>
+            Fishing and Recreational Angling in Australia | 2026
+        </p>
+
+    </div>
+
+    <!-- Load all 8 Vega-Lite visualisations -->
+    <script type="text/javascript">
+
+        var specVis1 =
+            "1_choropleth_map/js/choropleth_map.vg.json";
+        vegaEmbed('#vis1', specVis1)
+            .catch(console.error);
+
+        var specVis2 =
+            "2_proportional_symbol_map/js/proportional_symbol_map.vg.json";
+        vegaEmbed('#vis2', specVis2)
+            .catch(console.error);
+
+        var specVis3 =
+            "3_dot_map/js/dot_plot_6_type.vg.json";
+        vegaEmbed('#vis3', specVis3)
+            .catch(console.error);
+
+        var specVis4 =
+            "4_heat_map/js/heat_map.vg.json";
+        vegaEmbed('#vis4', specVis4)
+            .catch(console.error);
+
+        var specVis5 =
+            "5_dumbbell_plot/js/dumbbell_plot.vg.json";
+        vegaEmbed('#vis5', specVis5)
+            .catch(console.error);
+
+        var specVis6 =
+            "6_radar_chart/js/radar_chart.vg.json";
+        vegaEmbed('#vis6', specVis6)
+            .catch(console.error);
+
+        var specVis7 =
+            "7_bump_chart/js/bump_chart.vg.json";
+        vegaEmbed('#vis7', specVis7)
+            .catch(console.error);
+
+        var specVis8 =
+            "8_lollipop_chart/js/lollipop_chart.vg.json";
+        vegaEmbed('#vis8', specVis8)
+            .catch(console.error);
+
+    </script>
+
+</body>
+
+</html>
